@@ -28,7 +28,13 @@ jobs:
         make gitKind
         cd kind
         make cert-manager 
-        
+  
+  
+    - name: extra utils
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y tshark
+    
     
     - uses: mchirico/vscode-action@v1
       with:
