@@ -25,4 +25,4 @@ jobs:
       with:
         ngrok_token: ${{ secrets.NGROK_TOKEN }}
         vscode_port: 8779
-        wait_duration: 7hr
+        wait_duration: 17hr
