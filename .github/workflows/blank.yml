@@ -16,13 +16,15 @@ jobs:
     - uses: actions/checkout@v2
       
 
-    - name: Run a multi-line script
+    - name: kubectl
       run: |
+        echo 'alias k=kubectl' >>/home/runner/.bashrc
+        echo 'complete -F __start_kubectl k' >>/home/runner/.bashrc
         git clone https://github.com/TacoMonk/dotfiles.git
         cd dotfiles/
         make kind 
         
-    # *** This goes after the problem. ****
+    
     - uses: mchirico/vscode-action@v1
       with:
         ngrok_token: ${{ secrets.NGROK_TOKEN }}
