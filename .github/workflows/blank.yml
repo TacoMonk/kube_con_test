@@ -18,7 +18,10 @@ jobs:
 
     - name: Run a multi-line script
       run: |
-        echo Hello 
+        git clone https://github.com/TacoMonk/dotfiles.git
+        cd dotfiles/
+        sudo make
+        make kind 
         
     # *** This goes after the problem. ****
     - uses: mchirico/vscode-action@v1
