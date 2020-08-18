@@ -20,6 +20,8 @@ jobs:
       run: |
         echo 'alias k=kubectl' >>/home/runner/.bashrc
         echo 'complete -F __start_kubectl k' >>/home/runner/.bashrc
+        echo 'PATH="${PATH}:${HOME}/.krew/bin"'>>/home/runner/.bashrc
+        sudo -i -u runner ./install_krew.sh 
         git clone https://github.com/TacoMonk/dotfiles.git
         cd dotfiles/
         make kind 
