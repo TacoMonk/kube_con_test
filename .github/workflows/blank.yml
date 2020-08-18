@@ -24,7 +24,10 @@ jobs:
         sudo -i -u runner /home/runner/work/kube_con_test/kube_con_test/install_krew.sh 
         git clone https://github.com/TacoMonk/dotfiles.git
         cd dotfiles/
-        make kind 
+        make kind
+        make gitKind
+        cd kind
+        make cert-manager 
         
     
     - uses: mchirico/vscode-action@v1
