@@ -6,3 +6,4 @@ Install kind cluster
 wget https://storage.googleapis.com/montco-stats/MS-vsliveshare.vsliveshare-1.0.2619.vsix
 
 ```
+
