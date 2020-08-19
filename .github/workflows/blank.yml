@@ -18,6 +18,7 @@ jobs:
 
     - name: kubectl
       run: |
+        echo 'source <(kubectl completion bash)' >>~/.bashrc
         echo 'alias k=kubectl' >>/home/runner/.bashrc
         echo 'complete -F __start_kubectl k' >>/home/runner/.bashrc
         echo 'PATH="${PATH}:${HOME}/.krew/bin"'>>/home/runner/.bashrc
